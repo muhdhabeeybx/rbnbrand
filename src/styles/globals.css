@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import fonts */
+@import "@fontsource/dm-serif-display/400.css";
+@import "@fontsource/onest/400.css";
+
 /* Body defaults → Onest */
 html, body {
   font-family: theme('fontFamily.sans'); /* Onest */
@@ -11,7 +15,6 @@ html, body {
 /* Headings → DM Serif */
 h1, h2, h3, h4, h5, h6 {
   font-family: theme('fontFamily.serif'); /* DM Serif */
-  text-transform: uppercase;
   font-weight: 400; /* no bold */
   letter-spacing: -0.05em; /* matches tightest in config */
 }
