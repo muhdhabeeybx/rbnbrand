@@ -1,6 +1,6 @@
 
   {
-      "name": "Rain by Nurain Streetwear E-commerce Website",
+      "name": "Rain by Nurain",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -47,6 +47,8 @@
           "sonner": "^2.0.3",
           "tailwind-merge": "*",
           "vaul": "^1.1.2"
+          "@fontsource/dm-serif-display": "^5.0.0",
+          "@fontsource/onest": "^5.0.0"
       },
       "devDependencies": {
           "@types/node": "^20.10.0",
