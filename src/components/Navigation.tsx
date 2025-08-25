@@ -4,6 +4,9 @@ import { Button } from "./ui/button";
 import { useApp } from "../contexts/AppContext";
 import { useNavigate, useLocation } from "react-router-dom";
 
+// Import your logo image
+import Logo from "../imgi_10_535893279_17979911351897537_4372649792575288199_n.jpg";
+
 export function Navigation() {
   const { cartCount, setIsCartOpen, setIsMobileMenuOpen } = useApp();
   const navigate = useNavigate();
@@ -57,16 +60,12 @@ export function Navigation() {
 
           {/* Logo */}
           <div className="flex-1 lg:flex-none lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-            <button
-              onClick={() => navigate("/")}
-              className="block text-center"
-            >
-              <h1 className="text-xl font-bold tracking-tight lg:text-2xl">
-                RBN
-              </h1>
-              <p className="text-xs text-gray-600 hidden sm:block">
-                Rain by Nurain
-              </p>
+            <button onClick={() => navigate("/")} className="block text-center">
+              <img 
+                src={Logo} 
+                alt="Rain by Nurain Logo" 
+                className="h-10 w-auto mx-auto"
+              />
             </button>
           </div>
 
