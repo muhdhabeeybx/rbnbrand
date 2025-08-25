@@ -5,7 +5,7 @@ import { useApp } from "../contexts/AppContext";
 import { useNavigate, useLocation } from "react-router-dom";
 
 // Import your logo image
-import Logo from "../imgi_10_535893279_17979911351897537_4372649792575288199_n.jpg";
+import Logo from "../RBN-Logo.jpg";
 
 export function Navigation() {
   const { cartCount, setIsCartOpen, setIsMobileMenuOpen } = useApp();
