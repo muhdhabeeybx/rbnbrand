@@ -32,18 +32,17 @@ export function HeroSection() {
         className="relative z-10 text-center px-6 max-w-4xl mx-auto"
       >
         {/* Hero Title */}
-        <h1 className="font-bold text-[65px] leading-tight mb-8">
+        <h1 className="font-serif font-normal text-[60px] md:text-[65px] lg:text-[70px] leading-tight tracking-tight mb-8">
           Left Home to Feed Home
         </h1>
-
-        {/* Description */}
+      
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.2 }}
-          className="text-base md:text-lg lg:text-xl leading-relaxed text-white/85 mb-12 px-[50px]"
+          className="font-sans text-base md:text-lg lg:text-xl leading-relaxed text-white/85 mb-12 px-[50px]"
         >
-          Nigerian streetwear for dreamers and doers who carry home wherever they go.
+          Rain by Nurain — Nigerian streetwear for dreamers and doers who carry home wherever they go.
         </motion.p>
 
         {/* Button */}
