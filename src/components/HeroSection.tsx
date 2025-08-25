@@ -22,32 +22,28 @@ export function HeroSection() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="relative z-10 text-center px-6 max-w-4xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-light tracking-[0.15em] uppercase mb-6">
-          RAIN <span className="text-white/50">by</span> NURAIN
+        {/* Heading (DM Serif by default via globals.css) */}
+        <h1 className="text-5xl md:text-7xl lg:text-[6rem] mb-6">
+          Rain <span className="text-white/50">by</span> Nurain
         </h1>
 
+        {/* Subtitle (Onest by default) */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.2 }}
-          className="text-base md:text-xl lg:text-2xl font-extralight tracking-[0.25em] uppercase mb-12 text-white/80"
+          className="text-base md:text-xl lg:text-2xl tracking-wide mb-12 text-white/80"
         >
           Left Home to Feed Home
         </motion.p>
 
+        {/* Buttons (Onest) */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-white text-black hover:bg-neutral-200 px-10 py-4 text-base font-light rounded-full transition-all duration-300"
+            className="bg-white text-black hover:bg-neutral-200 px-10 py-4 text-base rounded-full transition-all duration-300"
           >
-            Shop Collection
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-white/70 text-white hover:bg-white hover:text-black px-10 py-4 text-base font-light rounded-full transition-all duration-300"
-          >
-            Discover the Story
+            Shop Now
           </Button>
         </div>
       </motion.div>
