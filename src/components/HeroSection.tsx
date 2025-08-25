@@ -3,7 +3,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import HeroBg from "../assets/RBN-Hero.jpg"; 
+import HeroBg from "../RBN-Hero.jpg"; 
 
 export function HeroSection() {
   const navigate = useNavigate();
