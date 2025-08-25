@@ -40,7 +40,7 @@ export function NewArrivals() {
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">New Arrivals</h2>
+        <h2 className="text-4xl font-bold mb-4">New Drops</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Fresh drops for the culture. Each piece crafted with intention, 
           designed for those who move with purpose.
