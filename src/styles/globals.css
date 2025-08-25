@@ -1,3 +1,13 @@
+html {
+  font-family: theme('fontFamily.sans'); /* Onest for body text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: theme('fontFamily.serif'); /* DM Serif for headings */
+  font-weight: 400;
+  letter-spacing: theme('letterSpacing.tightest');
+}
+
 @import "@fontsource/dm-serif-display/400.css";
 @import "@fontsource/onest/400.css";
 @custom-variant dark (&:is(.dark *));
