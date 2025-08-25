@@ -32,18 +32,28 @@ export function HeroSection() {
         className="relative z-10 text-center px-6 max-w-4xl mx-auto"
       >
         {/* Hero Title */}
-        <h1 className="font-sans font-extrabold text-[48px] md:text-[68px] lg:text-[88px] leading-none tracking-tight text-white mb-6">
-        Left Home to Feed Home
-      </h1>
-        
-      <motion.p
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 1.2 }}
-        className="font-sans text-base md:text-lg lg:text-xl leading-relaxed text-slate-400 max-w-3xl mx-auto"
-      >
-        Nigerian streetwear for dreamers and doers who carry home wherever they go.
-      </motion.p>
+        <h1 className="font-serif font-normal text-[42px] sm:text-[55px] md:text-[65px] lg:text-[75px] xl:text-[85px] leading-tight tracking-tight text-white mb-8">
+  Left Home to Feed Home
+</h1>
+
+<motion.p
+  initial={{ opacity: 0, y: 15 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 1.2 }}
+  className="font-sans text-base md:text-lg lg:text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto px-6"
+>
+  Rain by Nurain — Nigerian streetwear for dreamers and doers who carry home wherever they go.
+</motion.p>
+
+<div className="flex justify-center mt-10">
+  <Button
+    size="lg"
+    onClick={handleShopClick}
+    className="bg-white text-black hover:bg-neutral-200 px-6 md:px-8 py-4 text-base rounded-[4px] transition-all duration-300"
+  >
+    Start Shopping
+  </Button>
+</div>
 
         {/* Button */}
         <div className="flex justify-center">
