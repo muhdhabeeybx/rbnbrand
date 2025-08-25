@@ -8,8 +8,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: theme('letterSpacing.tightest');
 }
 
-@import "@fontsource/dm-serif-display/400.css";
-@import "@fontsource/onest/400.css";
 @custom-variant dark (&:is(.dark *));
 
 :root {
