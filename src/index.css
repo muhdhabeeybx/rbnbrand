@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font styles */
+body {
+  @apply font-sans; /* Onest for text */
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif tracking-tight uppercase font-normal;
+}
+
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
