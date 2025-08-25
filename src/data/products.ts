@@ -3,7 +3,7 @@ import { Product } from '../contexts/AppContext';
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'Essential Hoodie',
+    name: 'Luxury Hoodie',
     price: 120,
     image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80',
     category: 'hoodies',
