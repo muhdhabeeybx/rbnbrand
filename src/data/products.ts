@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
     colors: ['Black', 'White', 'Grey'],
     description: 'Premium heavyweight cotton hoodie with embroidered logo. Cut for a relaxed fit with dropped shoulders and ribbed cuffs.',
     images: [
-      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80',
+      'src/imgi_9_535547013_17979911465897537_1455455120234668176_n.jpg',
       'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
       'https://images.unsplash.com/photo-1503341338985-95b4d88dc7a8?w=800&q=80',
     ],
