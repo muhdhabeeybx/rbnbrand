@@ -1,11 +1,19 @@
-html {
-  font-family: theme('fontFamily.sans'); /* Onest for body text */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body defaults → Onest */
+html, body {
+  font-family: theme('fontFamily.sans'); /* Onest */
+  font-weight: 400;
 }
 
+/* Headings → DM Serif */
 h1, h2, h3, h4, h5, h6 {
-  font-family: theme('fontFamily.serif'); /* DM Serif for headings */
-  font-weight: 400;
-  letter-spacing: theme('letterSpacing.tightest');
+  font-family: theme('fontFamily.serif'); /* DM Serif */
+  text-transform: uppercase;
+  font-weight: 400; /* no bold */
+  letter-spacing: -0.05em; /* matches tightest in config */
 }
 
 @custom-variant dark (&:is(.dark *));
