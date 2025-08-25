@@ -19,9 +19,6 @@ export function CartSidebar() {
     currency,
     setCurrency,
     currencies,
-    location,
-    setLocation,
-    locations,
   } = useApp();
   
   const navigate = useNavigate();
@@ -29,9 +26,6 @@ export function CartSidebar() {
   const formatPrice = (price: number) => {
     return `${currency.symbol}${(price * currency.rate).toFixed(2)}`;
   };
-
-  const shippingCost = location.shipping * currency.rate;
-  const totalWithShipping = cartTotal + shippingCost;
 
   const handleCheckout = () => {
     setIsCartOpen(false);
@@ -75,47 +69,29 @@ export function CartSidebar() {
                 </Button>
               </div>
 
-              {/* Currency & Location Selectors */}
-              <div className="p-6 border-b space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm mb-2">Currency</label>
-                    <Select value={currency.code} onValueChange={(code) => {
-                      const newCurrency = currencies.find(c => c.code === code);
-                      if (newCurrency) setCurrency(newCurrency);
-                    }}>
-                      <SelectTrigger>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {currencies.map((curr) => (
-                          <SelectItem key={curr.code} value={curr.code}>
-                            {curr.code} ({curr.symbol})
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm mb-2">Ship to</label>
-                    <Select value={location.code} onValueChange={(code) => {
-                      const newLocation = locations.find(l => l.code === code);
-                      if (newLocation) setLocation(newLocation);
-                    }}>
-                      <SelectTrigger>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {locations.map((loc) => (
-                          <SelectItem key={loc.code} value={loc.code}>
-                            {loc.country}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
+              {/* Currency Selector */}
+              <div className="p-6 border-b">
+                <label className="block text-sm mb-2">Currency</label>
+                <Select
+                  value={currency.code}
+                  onValueChange={(code) => {
+                    const newCurrency = currencies.find(c => c.code === code);
+                    if (newCurrency) setCurrency(newCurrency);
+                  }}
+                >
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {currencies
+                      .filter(c => ["NGN", "USD", "EUR"].includes(c.code))
+                      .map(curr => (
+                        <SelectItem key={curr.code} value={curr.code}>
+                          {curr.code} ({curr.symbol})
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               {/* Cart Items */}
@@ -195,14 +171,10 @@ export function CartSidebar() {
                       <span>Subtotal</span>
                       <span>{formatPrice(cartTotal / currency.rate)}</span>
                     </div>
-                    <div className="flex justify-between text-sm text-gray-500">
-                      <span>Shipping to {location.country}</span>
-                      <span>{shippingCost > 0 ? formatPrice(shippingCost / currency.rate) : 'Free'}</span>
-                    </div>
                     <Separator />
                     <div className="flex justify-between font-medium">
                       <span>Total</span>
-                      <span>{formatPrice(totalWithShipping / currency.rate)}</span>
+                      <span>{formatPrice(cartTotal / currency.rate)}</span>
                     </div>
                   </div>
                   
