@@ -23,40 +23,50 @@ export function LifestyleEditorial() {
   ];
 
   return (
-    <section className="py-16">
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-4">Lifestyle</h2>
-        <p className="text-xl text-gray-600">A movement, not just a brand</p>
-      </div>
+    <section className="py-16 px-4">
+      <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        {/* Header */}
+        <div className="text-center mb-12 px-6 pt-12">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Lifestyle</h2>
+          <p className="text-xl text-gray-600">A movement, not just a brand</p>
+        </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-        {editorialImages.map((item, index) => (
-          <div key={item.id} className="relative aspect-[4/5] overflow-hidden group cursor-pointer">
-            <ImageWithFallback
-              src={item.image}
-              alt={`Editorial ${index + 1}`}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/40"></div>
-            
-            {/* Text overlay */}
-            <div className="absolute inset-0 flex items-center justify-center text-center text-white p-8">
-              <div className="transform transition-transform duration-500 group-hover:scale-105">
-                <h3 className="text-3xl lg:text-4xl font-bold mb-2 tracking-tight">
-                  {item.text}
-                </h3>
-                <p className="text-sm lg:text-base opacity-90 font-light tracking-wide">
-                  {item.subtext}
-                </p>
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+          {editorialImages.map((item, index) => (
+            <div
+              key={item.id}
+              className="relative aspect-[4/5] overflow-hidden group cursor-pointer"
+            >
+              <ImageWithFallback
+                src={item.image}
+                alt={`Editorial ${index + 1}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/40"></div>
+
+              {/* Text overlay */}
+              <div className="absolute inset-0 flex items-center justify-center text-center text-white p-8">
+                <div className="transform transition-transform duration-500 group-hover:scale-105">
+                  <h3 className="text-3xl lg:text-4xl font-bold mb-2 tracking-tight">
+                    {item.text}
+                  </h3>
+                  <p className="text-sm lg:text-base opacity-90 font-light tracking-wide">
+                    {item.subtext}
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Decorative line */}
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-          </div>
-        ))}
+              {/* Decorative line */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Padding bottom */}
+        <div className="pb-12"></div>
       </div>
     </section>
   );
