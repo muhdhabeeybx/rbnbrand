@@ -1,0 +1,102 @@
+import { Product } from '../contexts/AppContext';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'Essential Hoodie',
+    price: 120,
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80',
+    category: 'hoodies',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#000000', '#FFFFFF', '#808080'],
+    description: 'Premium heavyweight cotton hoodie with embroidered logo. Cut for a relaxed fit with dropped shoulders and ribbed cuffs.',
+    images: [
+      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80',
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
+      'https://images.unsplash.com/photo-1503341338985-95b4d88dc7a8?w=800&q=80',
+    ],
+  },
+  {
+    id: '2',
+    name: 'Cargo Pants',
+    price: 140,
+    image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&q=80',
+    category: 'pants',
+    sizes: ['28', '30', '32', '34', '36', '38'],
+    colors: ['#000000', '#556B2F', '#F0E68C'],
+    description: 'Heavy-duty cargo pants with multiple pockets. Made from durable ripstop fabric with reinforced stitching.',
+    images: [
+      'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80',
+      'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+    ],
+  },
+  {
+    id: '3',
+    name: 'Graphic Tee',
+    price: 45,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80',
+    category: 'tees',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#000000', '#FFFFFF'],
+    description: 'Premium cotton tee with screen-printed graphics. Pre-shrunk and garment-washed for the perfect fit.',
+    images: [
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
+      'https://images.unsplash.com/photo-1503341338985-95b4d88dc7a8?w=800&q=80',
+      'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80',
+    ],
+  },
+  {
+    id: '4',
+    name: 'Bomber Jacket',
+    price: 180,
+    image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&q=80',
+    category: 'outerwear',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#000000', '#556B2F'],
+    description: 'Classic bomber jacket with modern details. Water-resistant nylon shell with fleece lining.',
+    images: [
+      'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+      'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80',
+    ],
+  },
+  {
+    id: '5',
+    name: 'Denim Jacket',
+    price: 160,
+    image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&q=80',
+    category: 'outerwear',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#4B0082', '#000000', '#D3D3D3'],
+    description: 'Vintage-inspired denim jacket with authentic washed finish. 100% cotton denim with metal hardware.',
+    images: [
+      'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80',
+      'https://images.unsplash.com/photo-1506629905607-45c2e806d671?w=800&q=80',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+    ],
+  },
+  {
+    id: '6',
+    name: 'Track Pants',
+    price: 90,
+    image: 'https://images.unsplash.com/photo-1506629905607-45c2e806d671?w=400&q=80',
+    category: 'pants',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#000000', '#000080', '#696969'],
+    description: 'Comfortable track pants with side stripe details. Made from technical jersey fabric with elastic waistband.',
+    images: [
+      'https://images.unsplash.com/photo-1506629905607-45c2e806d671?w=800&q=80',
+      'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80',
+      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+    ],
+  },
+];
+
+export const CATEGORIES = [
+  { id: 'all', name: 'All', count: PRODUCTS.length },
+  { id: 'hoodies', name: 'Hoodies', count: PRODUCTS.filter(p => p.category === 'hoodies').length },
+  { id: 'tees', name: 'Tees', count: PRODUCTS.filter(p => p.category === 'tees').length },
+  { id: 'pants', name: 'Pants', count: PRODUCTS.filter(p => p.category === 'pants').length },
+  { id: 'outerwear', name: 'Outerwear', count: PRODUCTS.filter(p => p.category === 'outerwear').length },
+];
