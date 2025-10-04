@@ -59,4 +59,9 @@
       port: 3000,
       open: true,
     },
+    
+    "scripts": {
+          "dev": "vite",
+          "build": "vite build"
+      }
   });
